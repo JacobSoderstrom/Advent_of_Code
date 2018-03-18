@@ -13,8 +13,8 @@ while d[count%4]<=num:
     #Calculating new number since the increase is 2*count+1+value at position in step before
     d[count%4]=d[count%4]+2*count+1
     #Adding step if a 4 cylce is completed
-    if count%4==0:
-        step=step+1
+    step=step+int(count%4==0)
+
 #Adding steps which would be needed to arrive to value that has "straight" line to 1. It selects the closest nukmber, either a larger or smaLler.
 total_step=step+min(num-d[(count-1)%4], d[count%4]-num)
 #Print how many steps needed
